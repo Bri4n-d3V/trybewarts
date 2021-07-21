@@ -61,3 +61,11 @@ main {
   display: flex;
   width: 675px;
 }
+
+.image-main {
+  align-self: flex-end;
+}
+
+.image-main img {
+  height: 500px;
+}
