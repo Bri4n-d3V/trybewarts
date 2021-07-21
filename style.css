@@ -1,7 +1,4 @@
 * {
-  padding: 0;
-  margin: 0;
-
   /* border: 1px solid red; */
 }
 
@@ -24,7 +21,7 @@
 }
 
 header button {
-  width: 60px;
+  width: 80px;
 }
 
 .trybewarts-header-logo {
@@ -69,4 +66,26 @@ main {
 
 .image-main img {
   height: 500px;
+}
+
+@media only screen and (min-width: 675px) {
+  .login-container .flex-container {
+    flex-flow: row nowrap;
+    width: 98%;
+  }
+
+  .login-container input {
+    margin: 1%;
+    width: 120px;
+  }
+
+  .login-container .flex-container {
+    min-width: 200px;
+  }
+
+  main.flex-container {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
 }
