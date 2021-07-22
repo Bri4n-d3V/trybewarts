@@ -74,9 +74,11 @@ main {
 }
 
 @media only screen and ( min-width : 675px ) {
+
   .login-container .flex-container {
     flex-flow: row nowrap;
     width: 98%;
+    min-width: 200px;
   }
 
   .login-container input {
@@ -84,15 +86,11 @@ main {
     width: 120px;
   }
 
-  .login-container .flex-container {
-    min-width: 200px;
-  }
-
-  form.flex-row {
+  header form {
     align-self: center;
   }
 
-  main.flex-container {
+  main {
     flex-flow: row nowrap;
     justify-content: space-around;
   }
@@ -104,6 +102,7 @@ main {
 }
 
 @media only screen and ( max-width : 675px ) {
+
   #evaluation-form {
     width: 400px;
     align-self: center;
