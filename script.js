@@ -44,3 +44,17 @@ function customHouseStyle() {
 }
 
 house.addEventListener('change', customHouseStyle);
+
+const checkBox = document.querySelector('#agreement');
+const submitBtn = document.querySelector('#submit-btn');
+
+function submitButton() {
+  checkBox.addEventListener('click', () => {
+    if (checkBox.checked) {
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  });
+}
+submitButton();
