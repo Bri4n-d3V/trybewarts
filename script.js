@@ -13,22 +13,28 @@ const authLog = () => {
 btnLogin.addEventListener('click', authLog);
 
 const house = document.querySelector('#house');
+const fieldBorder = document.querySelector('.field-border');
+const header = document.querySelector('.header');
+
+function changeColorHouse(color) {
+  fieldBorder.style.border = `1px solid ${color}`;
+  header.style.backgroundColor = color;
+}
 
 function customHouseStyle() {
   const houseValue = house.value;
-  const fieldBorder = document.querySelector('.field-border');
   switch (houseValue) {
   case 'Gitnória':
-    fieldBorder.style.border = '1px solid red';
+    changeColorHouse('red');
     break;
   case 'Reactpuff':
-    fieldBorder.style.border = '1px solid blue';
+    changeColorHouse('blue');
     break;
   case 'Corvinode':
-    fieldBorder.style.border = '1px solid green';
+    changeColorHouse('green');
     break;
   case 'Pytherina':
-    fieldBorder.style.border = '1px solid yellow';
+    changeColorHouse('yellow');
     break;
   default:
     break;
