@@ -128,3 +128,18 @@ main {
     flex-flow: column nowrap;
   }
 }
+
+@media only screen and ( max-width : 980px ) and ( min-width : 675px ) {
+
+  #evaluation-form {
+    height: 300px;
+  }
+
+  .image-main img {
+    height: 300px;
+  }
+
+  .image-main {
+    margin-top: 5%;
+  }
+}
