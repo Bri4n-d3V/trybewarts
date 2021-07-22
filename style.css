@@ -146,7 +146,7 @@ main {
 }
 
 @media only screen and ( max-width : 420px ) {
-  
+
   header img {
     width: 40px;
   }
