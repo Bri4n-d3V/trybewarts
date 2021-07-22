@@ -108,29 +108,26 @@ function getRate() {
 
 const infoList = [];
 
-function getSubmitData(event) {
-  event.preventDefault();
-  infoList.push(`Nome: ${getFullName()}`);
-  infoList.push(`Email: ${document.querySelector('#input-email').value}`);
-  infoList.push(`Casa: ${document.querySelector('#house').value}`);
-  infoList.push(`Família: ${getFamily()}`);
-  infoList.push(`Matérias: ${getSubjects().toString()}`);
-  infoList.push(`Avaliação: ${getRate()}`);
-  infoList.push(`Observações: ${document.querySelector('textarea').value}`);
+function showSubmitData() {
+  fieldBorder.innerHTML = '';
+  for (let i = 0; i < infoList.length; i += 1) {
+    const currentData = document.createElement('p');
+    currentData.innerHTML = infoList[i];
+    fieldBorder.appendChild(currentData);
+  }
+  fieldBorder.style.minHeight = '500px';
 }
 
-// function showSubmitData () {
-//   fieldBorder.innerHTML = '';
-//   const name = document.createElement('p');
-//   name.innerText = `Nome: ${infoList[0]} ${infoList[1]}`;
-//   const email = document.createElement('p');
-//   email.innerText = `Email: ${infoList[2]}`;
-//   const houseValue = document.createElement
-// }
+function getSubmitData(event) {
+  event.preventDefault();
+  infoList.push(`<strong>Nome</strong>: ${getFullName()}`);
+  infoList.push(`<strong>Email</strong>: ${document.querySelector('#input-email').value}`);
+  infoList.push(`<strong>Casa</strong>: ${document.querySelector('#house').value}`);
+  infoList.push(`<strong>Família</strong>: ${getFamily()}`);
+  infoList.push(`<strong>Matérias</strong>: ${getSubjects().join(', ').toString()}`);
+  infoList.push(`<strong>Avaliação</strong>: ${getRate()}`);
+  infoList.push(`<strong>Observações</strong>: ${document.querySelector('textarea').value}`);
+  showSubmitData();
+}
 
 submitBtn.addEventListener('click', getSubmitData);
-submitBtn.addEventListener('click', () => {
-  if (infoList.length > 0) {
-    console.log(infoList);
-  }
-});
