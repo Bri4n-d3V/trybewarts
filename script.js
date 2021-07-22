@@ -22,16 +22,16 @@ function customBGColor(HV) {
   const mainBG = mainColor.style;
   switch (HV) {
   case 'Gitnória':
-    mainBG.backgroundColor = '#161a1d';
+    mainBG.backgroundColor = '#333333';
     break;
   case 'Reactpuff':
-    mainBG.backgroundColor = '#90f1ef';
+    mainBG.backgroundColor = '#55DDFF';
     break;
   case 'Corvinode':
-    mainBG.backgroundColor = '#621708';
+    mainBG.backgroundColor = '#552200';
     break;
   case 'Pytherina':
-    mainBG.backgroundColor = '#0091ad';
+    mainBG.backgroundColor = '#2A7FFF';
     break;
   default:
     break;
@@ -49,16 +49,16 @@ function customHouseStyle() {
   const houseValue = house.value;
   switch (houseValue) {
   case 'Gitnória':
-    changeColorHouse('#fb5607', houseValue);
+    changeColorHouse('#E9541F', houseValue);
     break;
   case 'Reactpuff':
     changeColorHouse('#119da4', houseValue);
     break;
   case 'Corvinode':
-    changeColorHouse('#208b3a', houseValue);
+    changeColorHouse('#2CA059', houseValue);
     break;
   case 'Pytherina':
-    changeColorHouse('#f4d35e', houseValue);
+    changeColorHouse('#FFDD55', houseValue);
     break;
   default:
     break;
