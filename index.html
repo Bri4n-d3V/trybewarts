@@ -58,7 +58,7 @@
     <main class="flex-container">
       <form id="evaluation-form" class="flex-container" action="">
         <fieldset class="form-group field-border">
-          <section>
+          <section class="flex-container">
             <label for="name" class="form-label"><strong>Nome:</strong></label>
             <input
               type="text"
@@ -79,7 +79,7 @@
               class="form-control"
             />
           </section>
-          <section>
+          <section class="flex-container">
             <label for="email" class="form-label"
               ><strong>Email:</strong></label
             >
@@ -98,6 +98,12 @@
               <option value="Corvinode" id="corvinode-house">Corvinode</option>
               <option value="Pytherina" id="pytherina-house">Pytherina</option>
             </select>
+          </section>
+          <section id="family-section">
+            <label for="family" id="label-family">Qual sua família?</label>
+            <label for="frontend"><input type="radio" name="family" id="frontend" value="Frontend">Frontend</label>
+            <label for="backend"><input type="radio" name="family" id="backend" value="Backend">Backend</label>
+            <label for="fullstack"><input type="radio" name="family" id="fullstack" value="FullStack">FullStack</label>
           </section>
         </fieldset>
       </form>

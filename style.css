@@ -87,8 +87,12 @@ main {
 }
 
 #evaluation-form section {
-  display: flex;
   margin-bottom: 2%;
+}
+
+#family-section {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 @media only screen and ( min-width : 675px ) {
