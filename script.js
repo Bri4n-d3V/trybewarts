@@ -110,13 +110,13 @@ const infoList = [];
 
 function getSubmitData(event) {
   event.preventDefault();
-  infoList.push(getFullName());
-  infoList.push(document.querySelector('#input-email').value);
-  infoList.push(document.querySelector('#house').value);
-  infoList.push(getFamily());
-  infoList.push(getSubjects().toString());
-  infoList.push(getRate());
-  infoList.push(document.querySelector('textarea').value);
+  infoList.push(`Nome: ${getFullName()}`);
+  infoList.push(`Email: ${document.querySelector('#input-email').value}`);
+  infoList.push(`Casa: ${document.querySelector('#house').value}`);
+  infoList.push(`Família: ${getFamily()}`);
+  infoList.push(`Matérias: ${getSubjects().toString()}`);
+  infoList.push(`Avaliação: ${getRate()}`);
+  infoList.push(`Observações: ${document.querySelector('textarea').value}`);
 }
 
 // function showSubmitData () {
