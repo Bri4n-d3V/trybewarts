@@ -65,3 +65,26 @@ function textAreaCounter() {
   });
 }
 textAreaCounter();
+
+function getFamily() {
+  const families = document.getElementsByName('family');
+
+  for (let i = 0; i < families.length; i += 1) {
+    if (families[i].checked) {
+      return families[i].value;
+    }
+  }
+  return null;
+}
+
+function getSubmitData(event) {
+  event.preventDefault();
+  const name = document.querySelector('#input-name').value;
+  const lastName = document.querySelector('#input-lastname').value;
+  const email = document.querySelector('#input-email').value;
+  const houseValue = document.querySelector('#house').value;
+  const family = getFamily();
+  console.log(name, lastName, email, houseValue, family);
+}
+
+submitBtn.addEventListener('click', getSubmitData);
