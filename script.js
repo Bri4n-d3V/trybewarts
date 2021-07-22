@@ -66,6 +66,13 @@ function textAreaCounter() {
 }
 textAreaCounter();
 
+function getFullName() {
+  const name = document.querySelector('#input-name').value;
+  const lastName = document.querySelector('#input-lastname').value;
+
+  return `${name} ${lastName}`;
+}
+
 function getFamily() {
   const families = document.getElementsByName('family');
 
@@ -77,14 +84,53 @@ function getFamily() {
   return null;
 }
 
-function getSubmitData(event) {
-  event.preventDefault();
-  const name = document.querySelector('#input-name').value;
-  const lastName = document.querySelector('#input-lastname').value;
-  const email = document.querySelector('#input-email').value;
-  const houseValue = document.querySelector('#house').value;
-  const family = getFamily();
-  console.log(name, lastName, email, houseValue, family);
+function getSubjects() {
+  const subjects = document.getElementsByName('subject');
+  const chosenSubs = [];
+  for (let i = 0; i < subjects.length; i += 1) {
+    if (subjects[i].checked) {
+      chosenSubs.push(subjects[i].value);
+    }
+  }
+  return chosenSubs;
 }
 
+function getRate() {
+  const rates = document.getElementsByName('rate');
+
+  for (let i = 0; i < rates.length; i += 1) {
+    if (rates[i].checked) {
+      return rates[i].value;
+    }
+  }
+  return null;
+}
+
+const infoList = [];
+
+function getSubmitData(event) {
+  event.preventDefault();
+  infoList.push(getFullName());
+  infoList.push(document.querySelector('#input-email').value);
+  infoList.push(document.querySelector('#house').value);
+  infoList.push(getFamily());
+  infoList.push(getSubjects().toString());
+  infoList.push(getRate());
+  infoList.push(document.querySelector('textarea').value);
+}
+
+// function showSubmitData () {
+//   fieldBorder.innerHTML = '';
+//   const name = document.createElement('p');
+//   name.innerText = `Nome: ${infoList[0]} ${infoList[1]}`;
+//   const email = document.createElement('p');
+//   email.innerText = `Email: ${infoList[2]}`;
+//   const houseValue = document.createElement
+// }
+
 submitBtn.addEventListener('click', getSubmitData);
+submitBtn.addEventListener('click', () => {
+  if (infoList.length > 0) {
+    console.log(infoList);
+  }
+});
