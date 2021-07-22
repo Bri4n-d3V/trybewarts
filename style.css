@@ -19,6 +19,7 @@
 header button {
   width: 80px;
   font-family: Oldenburg, cursive;
+  margin-left: 2%;
 }
 
 .trybewarts-header-logo {
@@ -42,6 +43,7 @@ h1 {
 
 .login-container .flex-container {
   width: 100%;
+  margin-right: 2%;
 }
 
 .flex-row {
