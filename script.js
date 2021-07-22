@@ -16,27 +16,49 @@ const house = document.querySelector('#house');
 const fieldBorder = document.querySelector('.field-border');
 const header = document.querySelector('.header');
 const formColor = document.querySelector('#evaluation-form');
+const mainColor = document.querySelector('main');
 
-function changeColorHouse(color) {
+function customBGColor(HV) {
+  const mainBG = mainColor.style;
+  switch (HV) {
+  case 'Gitnória':
+    mainBG.backgroundColor = '#161a1d';
+    break;
+  case 'Reactpuff':
+    mainBG.backgroundColor = '#90f1ef';
+    break;
+  case 'Corvinode':
+    mainBG.backgroundColor = '#621708';
+    break;
+  case 'Pytherina':
+    mainBG.backgroundColor = '#0091ad';
+    break;
+  default:
+    break;
+  }
+}
+
+function changeColorHouse(color, HV) {
   fieldBorder.style.border = `1px solid ${color}`;
   header.style.backgroundColor = color;
   formColor.style.color = color;
+  customBGColor(HV);
 }
 
 function customHouseStyle() {
   const houseValue = house.value;
   switch (houseValue) {
   case 'Gitnória':
-    changeColorHouse('red');
+    changeColorHouse('#fb5607', houseValue);
     break;
   case 'Reactpuff':
-    changeColorHouse('blue');
+    changeColorHouse('#119da4', houseValue);
     break;
   case 'Corvinode':
-    changeColorHouse('green');
+    changeColorHouse('#208b3a', houseValue);
     break;
   case 'Pytherina':
-    changeColorHouse('yellow');
+    changeColorHouse('#f4d35e', houseValue);
     break;
   default:
     break;
