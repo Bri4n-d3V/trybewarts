@@ -86,6 +86,15 @@ main {
   margin-bottom: 5%;
 }
 
+#evaluation-form section {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+#evaluation-form label {
+  margin-right: 1%;
+}
+
 @media only screen and ( min-width : 675px ) {
 
   header h1 {
@@ -137,9 +146,5 @@ main {
 
   .image-main img {
     height: 300px;
-  }
-
-  .image-main {
-    margin-top: 5%;
   }
 }
