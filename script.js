@@ -15,10 +15,12 @@ btnLogin.addEventListener('click', authLog);
 const house = document.querySelector('#house');
 const fieldBorder = document.querySelector('.field-border');
 const header = document.querySelector('.header');
+const formColor = document.querySelector('#evaluation-form');
 
 function changeColorHouse(color) {
   fieldBorder.style.border = `1px solid ${color}`;
   header.style.backgroundColor = color;
+  formColor.style.color = color;
 }
 
 function customHouseStyle() {
