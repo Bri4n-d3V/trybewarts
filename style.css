@@ -58,6 +58,7 @@ main {
   display: flex;
   width: 675px;
   color: rgb(50, 167, 145);
+  flex-flow: column nowrap;
 }
 
 .image-main {
