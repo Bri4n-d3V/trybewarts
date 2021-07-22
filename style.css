@@ -95,6 +95,14 @@ main {
   align-items: center;
 }
 
+#learning-section {
+  text-align: center;
+}
+
+#learning-section div {
+  justify-content: center;
+}
+
 @media only screen and ( min-width : 675px ) {
 
   header h1 {
