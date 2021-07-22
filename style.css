@@ -65,8 +65,7 @@ main {
 
 #evaluation-form label {
   font-family: Oldenburg, cursive;
-  margin-left: 1%;
-  margin-top: 2%;
+  margin: 2% 1%;
 }
 
 .image-main {
@@ -89,10 +88,6 @@ main {
 #evaluation-form section {
   display: flex;
   margin-bottom: 2%;
-}
-
-#evaluation-form label {
-  margin-right: 1%;
 }
 
 @media only screen and ( min-width : 675px ) {
