@@ -79,7 +79,6 @@ main {
 
 .field-border {
   border: 1px solid rgb(50, 167, 145);
-  height: 500px;
   padding: 4%;
   border-radius: 3%;
   min-width: 100%;
@@ -95,6 +94,8 @@ main {
   flex-flow: column nowrap;
   align-items: center;
 }
+
+
 
 @media only screen and ( min-width : 675px ) {
 
