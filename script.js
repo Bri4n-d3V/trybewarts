@@ -55,3 +55,13 @@ checkBox.addEventListener('click', () => {
     submitBtn.disabled = true;
   }
 });
+
+function textAreaCounter() {
+  const textArea = document.querySelector('#textarea');
+  const counter = document.querySelector('#counter');
+
+  textArea.addEventListener('input', () => {
+    counter.innerHTML = `${textArea.maxLength - textArea.value.length} caracteres restantes.`;
+  });
+}
+textAreaCounter();
